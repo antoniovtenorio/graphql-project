@@ -5,11 +5,11 @@ type Autor {
 }
 
 # Root
-type Query {
+extend type Query {
     findAllAutor: [Autor]!
-    contarAutores: Long!
+    contarAutores: Int!
 }
 
-type Mutation {
+extend type Mutation {
     criarAutor(nome: String!, idade: Int): Autor!
 }

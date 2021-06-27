@@ -7,8 +7,10 @@ type Tutorial {
 
 extend type Query {
     findAllTutoriais: [Tutorial]!
-    contarTutoriais: Long!
+    contarTutoriais: Int!
 }
+
+
 
 extend type Mutation {
     criarTutorial(titulo: String!, descricao: String, autor: ID!): Tutorial!

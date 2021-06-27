@@ -2,11 +2,13 @@ package com.graphql.exemplo.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class Autor {
     @Id
@@ -21,5 +23,9 @@ public class Autor {
 
 
     public Autor(String nome, Integer idade) {
+    }
+
+    public Autor(Long id) {
+        this.id = id;
     }
 }

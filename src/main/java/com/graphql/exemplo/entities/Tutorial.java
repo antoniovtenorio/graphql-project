@@ -2,12 +2,14 @@ package com.graphql.exemplo.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Tutorial {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
