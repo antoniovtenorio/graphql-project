@@ -8,17 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TutorialResolver implements GraphQLResolver<Tutorial> {
+public class TutorialResolver implements GraphQLResolver<Tutorial>  {
 
     @Autowired
-    private final AutorRepository autorRepository;
-
-    public TutorialResolver(AutorRepository autorRepository) {
-        this.autorRepository = autorRepository;
-    }
-
-    public Autor getAutor(Tutorial tutorial)
+    private AutorRepository autorRepository;
+        public Autor getAutor(Tutorial tutorial)
     {
-        return autorRepository.findById(tutorial.getAutor().getId()).orElseThrow(()-> new RuntimeException("Erro ao localizar Autor"));
+        return autorRepository.findById((long) tutorial.getAutor().getId()).orElseThrow(()-> new RuntimeException("Erro ao localizar Autor"));
     }
 }

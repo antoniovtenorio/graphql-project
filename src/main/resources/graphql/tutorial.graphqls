@@ -10,8 +10,6 @@ extend type Query {
     contarTutoriais: Int!
 }
 
-
-
 extend type Mutation {
     criarTutorial(titulo: String!, descricao: String, autor: ID!): Tutorial!
     atualizarTutorial(id: ID!, titulo: String, descricao: String): Tutorial!

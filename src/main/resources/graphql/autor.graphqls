@@ -4,7 +4,6 @@ type Autor {
     idade: Int
 }
 
-# Root
 extend type Query {
     findAllAutor: [Autor]!
     contarAutores: Int!

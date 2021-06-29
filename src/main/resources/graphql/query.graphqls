@@ -1,9 +1,5 @@
 type Query {
-
 }
 
-
-
 type Mutation {
-
 }

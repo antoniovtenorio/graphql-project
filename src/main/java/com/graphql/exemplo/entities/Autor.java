@@ -7,25 +7,22 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 public class Autor {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column(name = "nome", nullable = false)
     private String nome;
 
     @Column(name = "idade")
-    private Integer Idade;
+    private Integer idade;
 
 
-    public Autor(String nome, Integer idade) {
-    }
-
-    public Autor(Long id) {
-        this.id = id;
+    public Autor(Long autorId) {
+        this.id = autorId;
     }
 }
